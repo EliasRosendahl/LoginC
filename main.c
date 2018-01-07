@@ -1,15 +1,20 @@
 #include "login.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
-    char name[8] = "";
-    char password[8] = "";
-    int tries = 0;
+
+    /*name and password are defined as pointers
+     * at login() they should not be passed as &name but simply as name, as
+     * they are already pointers
+     * */
+    char * name = malloc(8);
+    char * password = malloc(8);
 
     int i;
     for(i = 0; i < 3; i++){
         printf("\nusername\n");
-        fgets(name, 32, stdin);
+        fgets(name, 8, stdin);
 
         printf("\npassword\n");
         fgets(password, 32, stdin);

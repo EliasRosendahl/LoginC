@@ -4,7 +4,7 @@
 //returns 0 if both username and password is correct
 //otherwise it returns 1
 
-int login(char name[], char password[]){
+int login(char *name, char *password){
 
     static char users[][2][32] = {
             {"john\n", "1234\n"},
