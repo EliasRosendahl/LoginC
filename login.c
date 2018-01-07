@@ -6,7 +6,7 @@
 
 int login(char *name, char *password){
 
-    static char users[][2][32] = {
+    static char users[][2][8] = {
             {"john\n", "1234\n"},
             {"doe\n", "hunter2\n"},
             {"rick\n", "roll\n"}
@@ -14,7 +14,7 @@ int login(char *name, char *password){
 
     int i;
     for(i = 0; i < 5; i++){
-        if(strncmp(users[i][0], name, 32) == 0 && strncmp(users[i][1], password, 32) == 0){
+        if(strncmp(users[i][0], name, 8) == 0 && strncmp(users[i][1], password, 8) == 0){
             return 0;
         }
     };
