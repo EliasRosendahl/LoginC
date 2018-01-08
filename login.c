@@ -1,5 +1,4 @@
 #include <string.h>
-#include <stdio.h>
 
 //returns 0 if both username and password is correct
 //otherwise it returns 1
